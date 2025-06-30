@@ -16,7 +16,7 @@ async fn main() {
         .route("/token/create", post(create_token))
         .route("/token/mint", post(mint_token));
 
-    let addr = SocketAddr::from(([0, 0, 0, 0], 3001));
+    let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
     println!("Server running on: http://{}", addr);
     
     let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
